@@ -61,21 +61,10 @@ alias sbrc='source ~/.bashrc'
 alias catbp='cat ~/.bash_profile'
 alias catbrc='cat ~/.bashrc'
 
-# # Git branch bash completion
-# if [ -f ~/.git-completion.bash ]; then
-#   . ~/.git-completion.bash
-#
-#   # Add git completion to aliases
-#   __git_complete g __git_main
 __git_complete gco _git_checkout
 __git_complete gmerge __git_merge
 __git_complete gp _git_pull
 __git_complete gb _git_branch
-
-# fi
-#
-# alias g='git'
-# alias gco='git checkout'
 
 # # Git aliases
 alias gs='git status'

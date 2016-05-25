@@ -90,5 +90,14 @@ alias gpfb='git push -f origin $(git rev-parse --abbrev-ref HEAD)'
 alias gmerge='git merge --no-commit --ff-only' #must include branch name
 alias greset='git reset --hard HEAD~1'
 
+# Archive branch, save it to /maddie-archive, delete branch
+# Note must not be on that branch at the time
+garchive() {
+  local branchname=$@;
+  branchname=${branchname////-}; # Replace all / with -
+  git archive "$@" | gzip > ~/maddie-archive/$branchname.tar.gz;
+  git branch -D "$@";
+}
+
 # Load local .bash_profile if it exists
 test -f ~/.bash_profile_local && source ~/.bash_profile_local

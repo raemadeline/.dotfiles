@@ -91,10 +91,10 @@ alias gmerge='git merge --no-commit --ff-only' #must include branch name
 alias greset='git reset --hard HEAD~1'
 
 # Archive branch, save it to /maddie-archive, delete branch
-# Note must not be on that branch at the time
 garchive() {
   local branchname=$@;
   branchname=${branchname////-}; # Replace all / with -
+  git checkout master;
   git archive "$@" | gzip > ~/maddie-archive/$branchname.tar.gz;
   git branch -D "$@";
 }

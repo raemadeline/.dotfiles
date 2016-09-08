@@ -84,6 +84,7 @@ alias amend='git commit -a --amend'
 alias gst='git stash'
 alias gsta='git stash apply'
 alias gco='git checkout'
+alias gcom='git checkout master'
 alias gb='git branch'
 alias gcm='git add . && git commit -m' #must include commit message
 alias gcp='git cherry-pick'

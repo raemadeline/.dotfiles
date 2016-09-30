@@ -67,7 +67,7 @@ __git_complete gp _git_pull
 __git_complete gb _git_branch
 
 # # Git aliases
-alias gs='git status'
+alias gs='git status --short --branch'
 alias gl='git --no-pager log --color --pretty=format:"%C(yellow)%h%C(reset)%C(bold red)%d%C(reset) %s %C(black)— %an (%ad)%C(reset)" --abbrev-commit --relative-date | emojify | less --RAW-CONTROL-CHARS'
 alias gd='git diff'
 alias gdc='git show $COMMIT'
